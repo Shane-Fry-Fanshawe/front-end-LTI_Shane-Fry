@@ -1,0 +1,238 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*  ------ END OF RESET ------- */
+
+
+
+
+.boxHelper
+{
+	color: #fff;
+  background-color: black;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+@font-face {
+    font-family: bebas, Times, serif;
+    src: url(fonts/bebas.ttf);
+}
+
+
+.lato
+{
+	font-family: 'Lato', sans-serif;
+}
+
+.bebas
+{
+	font-family: bebas, sans-serif;
+}
+
+.admin_body
+{
+	background: #f7f7f7; /* Old browsers */
+background: -moz-linear-gradient(left, #f7f7f7 0%, #ff7f00 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #f7f7f7 0%,#ff7f00 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #f7f7f7 0%,#ff7f00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#ff7f00',GradientType=1 ); /* IE6-9 */
+}
+
+.submit
+{
+
+	    background-color: #ff7f00;
+	    border: none;
+	    color: white;
+	    padding: 10px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
+	    cursor: pointer;
+			border-radius: 20px;
+			margin-bottom: 20px;
+
+}
+
+.welcome_logo
+{
+	padding-bottom: 40px;
+		display: block;
+		margin: 0 auto;
+}
+
+.center_img
+{
+		display: block;
+		margin: 0 auto;
+}
+
+
+.welcome_admin
+{
+	font-size: 2em;
+	margin-bottom: 40px;
+		text-align: center;
+	margin-top: 40px;
+	color: white;
+}
+
+label
+{
+	margin-bottom: 20px;
+}
+
+
+.admin_header
+{
+	text-align: center;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		color: white;
+		background: rgb(255,168,76); /* Old browsers */
+	background: -moz-linear-gradient(-45deg, rgba(255,168,76,1) 0%, rgba(255,123,13,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.orange
+{
+	color: #ff7f00;
+}
+
+
+
+.logo
+{
+	margin-bottom: 20px;
+}
+
+
+.admin_back
+{
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.admin_nav{
+	text-transform: uppercase;
+			border-top: 1px solid white;
+    list-style:none;
+    margin:10px;
+    padding:10px;
+    text-align:center;
+}
+.admin_nav li{
+    display:inline;
+}
+.admin_nav a{
+    display:inline-block;
+    padding:10px;
+		color: white;
+}
+
+.admin_nav a:hover{
+    font-weight: bold;
+		border-bottom: 1px solid white;
+}
+
+.welcome_message
+{
+	text-align: center;
+	font-size: 2em;
+	margin-top: 50px;
+}
+
+
+#edit_user_title
+{
+	text-align: center;
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden
+{
+	display: none;
+}

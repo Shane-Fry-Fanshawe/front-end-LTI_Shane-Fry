@@ -10,8 +10,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CMS Portal</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css">
+<title>LTI CMS - Delete User</title>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link rel="stylesheet" href="../css/foundation.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="../js/minified/TweenMax.min.js"></script>
 </head>
 <body>
 
@@ -35,4 +38,10 @@
 			echo "<div class=\"delete\"> <p>{$row['user_fname']}</p><a href=\"phpscripts/caller.php?caller_id=delete&id={$row['user_id']}\">Delete User</a><br><br></div>";
 		}
 	?>
+
+
+
+	<script src="../js/vendor/jquery.js"></script>
+	<script src="../js/vendor/what-input.js"></script>
+	<script src="../js/vendor/foundation.js"></script>
 </html>

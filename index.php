@@ -1,3 +1,24 @@
+<?php
+	//ini_set('display_errors',1);
+	//error_reporting(E_ALL);
+	require_once('admin/phpscripts/config.php');
+
+	if(isset($_GET['filter'])){
+		$tbl = "tbl_ledc";
+
+		$col = "movies_id";
+		$col2 = "genre_id";
+		$col3 = "genre_name";
+		$filter = $_GET['filter'];
+		$getLEDC = filterType($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter);
+	}else{
+		$tbl = "tbl_ledc";
+		$getLEDC = getAll($tbl);
+	}
+?>
+
+
+
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
 <head>
@@ -103,6 +124,19 @@
 
 
 </section>
+
+<?php
+
+
+		$row = mysqli_fetch_array($getLEDC);
+				echo "<div class=\"movie_container\"> <img class=\"movie_image\" src=\"images/{$row['ledc_img']}\" alt=\"{$row['ledc_title']}\">
+					<h2 class=\"movie_text\">{$row['ledc_desc']}</h2>
+
+					<br><br></div>";
+
+
+
+	?>
 
 
 

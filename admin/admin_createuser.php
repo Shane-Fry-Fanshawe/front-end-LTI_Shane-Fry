@@ -22,8 +22,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CMS Portal</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css">
+<title>LTI CMS - Create User</title>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link rel="stylesheet" href="../css/foundation.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="../js/minified/TweenMax.min.js"></script>
 </head>
 <body>
 
@@ -69,5 +72,10 @@
 
 	<input type="submit" name="submit" value="Create User">
 	</form>
+
+
+	<script src="../js/vendor/jquery.js"></script>
+	<script src="../js/vendor/what-input.js"></script>
+	<script src="../js/vendor/foundation.js"></script>
 </body>
 </html>
