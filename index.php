@@ -15,15 +15,47 @@
 
 
 
-<header class="lti_header">
+<header class="lti_header bebas">
 
 <div class="row">
 
-  <div class="columns small-4 boxHelper">
-logo
+
+
+
+  <div class="columns small-4">
+<a href="index.php"><img class="header_logo" src="images/logo.png" alt="LTI Logo"></a>
   </div>
-  <div class="columns small-6 boxHelper">
-nav
+
+  <div class="navBar hide-for-medium">
+    <div class="bar bar1"></div>
+    <div class="bar bar2"></div>
+    <div class="bar bar3"></div>
+  </div>
+
+  <div class="navList">
+  <ul>
+    <li><a href="what.php">WHAT</a></li>
+    <li><a href="index.php">WHY</a></li>
+    <li><a href="wow.php">WOW</a></li>
+  </ul>
+  </div>
+
+
+
+
+
+
+
+  <div class="columns small-6 show-for-medium">
+    <nav class="header_nav">
+            <img class="header_icon" src="images/social.png" alt="">
+            <img class="header_icon" src="images/social.png" alt="">
+      <ul>
+        <li><a href="what.php">WHAT</a></li>
+        <li><a href="index.php">WHY</a></li>
+        <li><a href="wow.php">WOW</a></li>
+      </ul>
+    </nav>
   </div>
 
 </div>
@@ -41,27 +73,27 @@ nav
 
   <div class="row">
     <div class="columns show-for-medium medium-4">
-<div class="circle">
-<p CLASS="vertical-align">WHAT</p>
-</div>
+<a href="what.php"><div class="circle">
+<p class="vertical-align circle_text bebas">WHAT</p>
+</div></a>
     </div>
-    <div class="columns show-for-medium medium-4">
+  <a href="index.php">  <div class="columns show-for-medium medium-4">
 <div class="circle">
-<p CLASS="vertical-align">WHY</p>
+<p class="vertical-align circle_text bebas">WHY</p>
 </div>
-    </div>
-    <div class="columns show-for-medium medium-4">
+    </div></a>
+  <a href="wow.php">  <div class="columns show-for-medium medium-4">
 <div class="circle">
-<p CLASS="vertical-align">WOW</p>
+<p class="vertical-align circle_text bebas">WOW</p>
 </div>
-    </div>
+    </div></a>
   </div>
 
 
 <div class="row">
 
   <div class="columns small-10 small-centered">
-    <p class="londonText">LONDON TECH INDUSTRY</p>
+    <p class="londonText lato">LONDON TECH INDUSTRY</p>
   </div>
 
 </div>
@@ -71,6 +103,7 @@ nav
 
 
 </section>
+
 
 
 
@@ -174,8 +207,27 @@ nav
 
 
 
-<footer class="lti_footer">
+<footer class="lti_footer lato">
 
+<div class="row">
+
+  <div class="columns small-4">
+<a href="index.php"><img class="footer_logo" src="images/footer_logo.png" alt="logo"></a>
+<p class="copyright">© 2018 London Tech Industry</p>
+  </div>
+
+  <div class="columns small-8">
+    <nav class="footer_nav ">
+      <ul>
+        <li><a href="what.php">WHAT</a></li>
+        <li><a href="index.php">WHY</a></li>
+        <li><a href="wow.php">WOW</a></li>
+        <li><a href="admin/admin_index.php">ADMIN</a></li>
+      </ul>
+    </nav>
+  </div>
+
+</div>
 
 
 </footer>
