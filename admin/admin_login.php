@@ -13,7 +13,7 @@
 			$result = logIn($username, $password, $ip);
 			$message = $result;
 		}else{
-			$message = "Please fill in the required fields";
+			$message = "*Please fill in the required fields*";
 		}
 	}
 ?>
@@ -21,19 +21,41 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CMS Portal Login</title>
+<title>LTI CMS - Portal Login</title>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link rel="stylesheet" href="../css/foundation.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="../js/minified/TweenMax.min.js"></script>
 </head>
-<body>
-	<h1>Welcome Company Name</h1>
+<body class="admin_body">
+
+
+
+	<div class="row">
+		<div class="columns small-10 small-centered">
+
+	<h1 class="welcome_admin bebas">Welcome - Please Log in</h1>
+	<img class="welcome_logo" src="images/logo.png" alt="lti logo">
 	<?php if(!empty($message)){echo $message;} ?>
-	<form action="admin_login.php" method="post">
+	<form class="lato" action="admin_login.php" method="post">
 		<label>Username:</label>
 		<input type="text" name="username" value="">
 		<br>
 		<label>Password:</label>
 		<input type="text" name="password" value="">
 		<br>
-		<input type="submit" name="submit" value="Show me the money">
+		<input class="submit" type="submit" name="submit" value="Show me the money">
 	</form>
+		</div>
+</div>
+
+
+
+
+
+
+<script src="../js/vendor/jquery.js"></script>
+<script src="../js/vendor/what-input.js"></script>
+<script src="../js/vendor/foundation.js"></script>
 </body>
 </html>

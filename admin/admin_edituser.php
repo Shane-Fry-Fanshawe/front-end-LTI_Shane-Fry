@@ -17,7 +17,7 @@
 		$password = trim($_POST['password']);
 		$email = trim($_POST['email']);
 		$result = editUser($id, $fname, $username, $password, $email);
-			$message = $result;
+		$message = $result;
 	}
 
 ?>
@@ -25,27 +25,49 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CMS Portal</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css">
+<title>CMS Portal - Edit User</title>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link rel="stylesheet" href="../css/foundation.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="../js/minified/TweenMax.min.js"></script>
 </head>
 <body>
-	<div class="admin_nav">
-		<ul>
-		<li><a href="admin_index.php">Home</a></li>
-		<li><a href="admin_editall.php">Edit Movie</a></li>
-		<li><a href="admin_addmovie.php">Add Movie</a></li>
-		<li><a href="admin_createuser.php">Create User</a></li>
-		<li><a href="admin_edituser.php">Edit User</a></li>
-		<li><a href="admin_deleteuser.php">Fired</a></li>
-		<li><a href="phpscripts/caller.php?caller_id=logout">Sign Out</a></li>
-		</ul>
+	<header class="admin_header bebas">
 
+
+	<div class="logo">
+	<a href="admin_index.php"><img src="../images/logo.png" alt="my logo"></a>
 		</div>
 
-	<section id="edit_user">
+			<h1 class="">Welcome to your admin page</h1>
+
+
+			<div class="row">
+					<div class="columns small-12 lato">
+						<div>
+						<ul class="admin_nav">
+							<li><a href="../index.php">Movies</a></li>
+						<li><a href="admin_index.php">Home</a></li>
+						<li><a href="admin_editall.php">Edit Movie</a></li>
+						<li><a href="admin_addmovie.php">Add Movie</a></li>
+						<li><a href="admin_createuser.php">Create User</a></li>
+						<li><a href="admin_edituser.php">Edit User</a></li>
+						<li><a href="admin_deleteuser.php">Fired</a></li>
+						<li><a href="phpscripts/caller.php?caller_id=logout">Sign Out</a></li>
+						</ul>
+							</div>
+				</div>
+			</div>
+		</header>
+
+
+	<section id="edit_user" class="row lato">
+		<div class="columns small-10 small-centered">
+
+
 		<h2 id="edit_user_title">EDIT USER</h2>
 
-		<img class="profile_image" src="images/user.svg" alt="template profile pic" height="100" width="100">
+		<img class="profile_image center_img" src="images/user.svg" alt="template profile pic" height="100" width="100">
 
 	<?php if(!empty($message)){echo $message;} ?>
 	<form action="admin_edituser.php" method="post">
@@ -69,9 +91,15 @@
 	<label>Email:</label>
 	<input class="user_info" type="text" name="email" value="<?php echo $found_user['user_email']; ?>
 "><br><br>
-	<input class="user_info" type="submit" name="submit" value="Edit Account">
+	<input class="user_info submit" type="submit" name="submit" value="Edit Account">
 	</form>
+
+	</div>
 </section>
 
+
+<script src="../js/vendor/jquery.js"></script>
+<script src="../js/vendor/what-input.js"></script>
+<script src="../js/vendor/foundation.js"></script>
 </body>
 </html>
