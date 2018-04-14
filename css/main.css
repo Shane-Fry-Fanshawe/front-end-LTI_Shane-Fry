@@ -56,8 +56,8 @@ table {
 }
 
 @font-face {
-    font-family: myriad, Times, serif;
-    src: url(../fonts/Myriad Pro Regular.ttf);
+    font-family: bebas, Times, serif;
+    src: url(fonts/bebas.ttf);
 }
 
 
@@ -98,6 +98,19 @@ table {
 }
 
 
+#what_section
+{
+	width: 100%;
+	height: auto;
+	background-image: url("../images/what_background_large.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+	background-size: cover;
+	padding-bottom: 40px;
+	padding-top: 100px;
+}
+
+
 
 #network_partners
 {
@@ -111,7 +124,6 @@ background-color: white;
 .lti_header
 {
 	width: 100%;
-
 	height: 50px;
 	position: absolute;
 }
@@ -120,9 +132,13 @@ background-color: white;
 .lti_footer
 {
 	width: 100%;
-	background-color: black;
-	height: 50px;
+	background-color: #ff7f00;
+	height: auto;
+	padding-top: 10px;
+
+
 }
+
 
 
 .read_more_button {
@@ -140,6 +156,12 @@ background-color: white;
 
 
 .indutry_icon
+{
+	display: block;
+	margin: 0 auto;
+}
+
+.what_icon
 {
 	display: block;
 	margin: 0 auto;
@@ -164,13 +186,13 @@ background-color: white;
 
 .why_title
 {
-	font-family: myriad;
 	text-align: center;
 }
 
 .why_desc
 {
 	text-align: center;
+	margin-bottom: 50px;
 }
 
 
@@ -195,8 +217,8 @@ background-color: white;
 .circle
 {
 	background-color: #ff7f00;
-	height: 250px;
-	width: 250px;
+	height: 150px;
+	width: 150px;
 	border-radius: 50%;
 	display: block;
 	border: solid 2px white;
@@ -216,6 +238,13 @@ background-color: white;
 {
 	text-align: center;
 	margin-bottom: 150px;
+	font-size: 2em;
+	color: white;
+}
+
+.circle_text
+{
+	font-size: 1.6em;
 }
 
 
@@ -225,6 +254,384 @@ position: relative;
 top: 50%;
 transform: translateY(-50%);
 }
+
+.opportunity, .growth, .success
+{
+	color: white;
+}
+
+.why_title_section
+{
+	color: white;
+}
+
+/*
+.what_text_section_odd
+{
+	float: right;
+}
+
+.image_odd
+{
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+
+.what_text_section
+{
+	float: left;
+}
+
+.image
+{
+		float: right;
+		width: 100px;
+		height: 100px;
+}
+*/
+
+#what_info img
+{
+	display: block;
+	margin: 0 auto;
+}
+
+.what_text_section
+{
+	margin: 0 auto;
+	text-align: center;
+	width: 80%;
+
+}
+
+.what_text_section_odd
+{
+	margin: 0 auto;
+	text-align: center;
+	width: 80%;
+}
+
+.what_info_container
+{
+	padding-bottom: 50px;
+}
+
+
+
+.header_logo
+{
+		padding-top: 20px;
+}
+
+
+
+
+.header_icon
+{
+			float: right;
+			margin-left: 20px;
+			padding-top: 30px;
+}
+
+.header_nav ul {
+    list-style-type: none;
+		float: right;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+		padding-top: 20px;
+}
+
+.header_nav li {
+    float: left;
+}
+
+.header_nav li a {
+    display: block;
+		margin-left: 20px;
+		margin-top: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.header_nav li a:hover {
+color: #ff7f00;
+}
+
+
+.footer_nav ul {
+    list-style-type: none;
+		float: right;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+		padding-top: 20px;
+}
+
+.footer_nav li {
+    float: left;
+}
+
+.footer_nav li a {
+    display: block;
+		margin-left: 20px;
+		margin-top: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.footer_nav li a:hover {
+border-bottom: 1px solid white;
+}
+
+.navBar {
+    display: inline-block;
+    cursor: pointer;
+		float: right;
+		padding-right: 20px;
+			padding-top: 20px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.navList
+{
+  display: none;
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 80px;
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+}
+
+.navList ul
+{
+    list-style-type: none;
+}
+
+	.navList li
+	{
+	border-bottom: 1px solid white;
+	}
+
+	.navList li:hover
+	{
+	border-bottom: 1px solid #ff7f00;
+	}
+
+.navList li a
+{
+  color: white;
+		width: 100%;
+}
+
+
+
+.what_video
+{
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	width: 100%;
+	padding-bottom: 40px;
+}
+
+.video_title
+{
+	text-align: center;
+	font-family: bebas, sans-serif;
+}
+
+
+.what_text_title
+{
+	font-family: bebas, sans-serif;
+}
+
+.what_text_desc
+{
+	font-family: 'Lato', sans-serif;
+}
+
+
+.lato
+{
+	font-family: 'Lato', sans-serif;
+}
+
+.bebas
+{
+	font-family: bebas, sans-serif;
+}
+
+
+.what_section_desc
+{
+	font-family: 'Lato', sans-serif;
+}
+
+.what_section_title
+{
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.what_section_box
+{
+	margin-bottom: 50px;
+}
+
+.copyright
+{
+	color: white;
+	font-size: 0.8em;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.footer_logo
+{
+	margin: 0 auto;
+	display: block;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1024px) {
+
+	.what_info_container
+	{
+		padding-bottom: 0px;
+	}
+
+
+	.what_text_section_odd
+	{
+		float: right;
+	}
+
+	.image_odd
+	{
+		background-color: black;
+		float: left;
+		margin: 0 auto;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+
+	}
+
+	.what_text_section
+	{
+		float: left;
+	}
+
+	.image
+	{
+			float: right;
+			width: 40%;
+			height: auto;
+			margin: 0 auto;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+	}
+
+	.what_text_section
+	{
+		margin: 0 auto;
+		text-align: left;
+		width: 50%;
+	}
+
+	.what_text_section_odd
+	{
+		margin: 0 auto;
+		text-align: right;
+		width: 50%;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.what_text_section
+	{
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+#what_info
+{
+	padding-top: 200px;
+}
+
+
+
+}
+
+@media only screen and (min-width: 640px) {
+
+.navList
+{
+	opacity: 0;
+}
+
+
+}
+
+@media only screen and (min-width: 800px) {
+
+	.circle
+	{
+		height: 250px;
+		width: 250px;
+	}
+
+	.circle_text
+	{
+		font-size: 2em;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
