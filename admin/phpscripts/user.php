@@ -71,7 +71,7 @@
 		$updatequery = mysqli_query($link, $updatestring);
 
 		if($updatequery) {
-			//redirect_to("admin_index.php");
+			redirect_to("admin_index.php");
 
 
 
