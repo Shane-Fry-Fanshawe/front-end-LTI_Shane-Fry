@@ -38,6 +38,7 @@ function logIn($username, $password, $ip) {
 							while($rowValue = mysqli_fetch_assoc($user_logincount)){
 								//echo $rowValue['user_login_count'];
 								$login_value = $rowValue['user_login_count'];
+								redirect_to("admin_index.php");
 							}
 						}
 

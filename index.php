@@ -3,6 +3,27 @@
 	//error_reporting(E_ALL);
 	require_once('admin/phpscripts/config.php');
 
+
+	if(isset($_POST['name'])){
+
+    $direct = "thankyou.php";
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $street = $_POST['street'];
+    $message = $_POST['message'];
+    //echo $name;
+
+    if($street === ""){
+      //echo "sent mail";
+      $sendMail = submitMessage($direct, $name, $email, $message);
+    }
+    /*else{
+      echo "try again";
+    } */
+  }
+
+
+
 	if(isset($_GET['filter'])){
 		$tbl = "tbl_ledc";
 
@@ -12,7 +33,7 @@
 		$filter = $_GET['filter'];
 		$getLEDC = filterType($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter);
 	}else{
-		$tbl = "tbl_ledc";
+		$tbl = "tbl_why";
 		$getLEDC = getAll($tbl);
 	}
 ?>
@@ -37,6 +58,7 @@
 
 
 <header class="lti_header bebas">
+	<h2 class="hidden">Header</h2>
 
 <div class="row">
 
@@ -69,7 +91,7 @@
 
   <div class="columns small-6 show-for-medium">
     <nav class="header_nav">
-            <img class="header_icon" src="images/social.png" alt="">
+			<h2 class="hidden">Header Nav</h2>
             <img class="header_icon" src="images/social.png" alt="">
       <ul>
         <li><a href="what.php">WHAT</a></li>
@@ -86,6 +108,7 @@
 
 
 <section id="circles_section">
+	<h2 class="hidden">Circles Section</h2>
   <div class="row circle_row">
     <div class="columns hide-for-medium small-10 small-centered">
     </div>
@@ -125,39 +148,27 @@
 
 </section>
 
-<?php
-
-
-		$row = mysqli_fetch_array($getLEDC);
-				echo "<div class=\"movie_container\"> <img class=\"movie_image\" src=\"images/{$row['ledc_img']}\" alt=\"{$row['ledc_title']}\">
-					<h2 class=\"movie_text\">{$row['ledc_desc']}</h2>
-
-					<br><br></div>";
-
-
-
-	?>
-
 
 
 
 <section id="start_journey">
+	<h2 class="hidden">Start Journey</h2>
 
 <div class="row">
   <div class="columns small-12 small-centered start_journey_title">
-    <h2 class="start_title">WHY START YOUR JOURNEY HERE?</h2>
-    <p class="start_desc">Come for business, stay for life.</p>
+    <h2 class="start_title bebas">WHY START YOUR JOURNEY HERE?</h2>
+    <p class="start_desc lato">Come for business, stay for life.</p>
   </div>
 
   <div class="columns small-12 medium-6 start_journey_strong">
-    <h3 class="strong_sub_title">Strong network and community</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
+    <h3 class="strong_sub_title bebas">Strong network and community</h3>
+    <p class="lato">London’s has a strong digital creative sector with over 300 companies employing more than 9,000 people - has been built on innovative local start-up ventures finding a niche market and growing into successful Canadian and global players like Autodata Solutions, Info-Tech Research Group and Big Blue Bubble. The arts have inherent value and make an enormous contribution to the quality of life and vibrancy of London. </p>
     <button class="read_more_button">Read More</button>
   </div>
 
   <div class="columns small-12 medium-6 start_journey_shovel">
-    <h3 class="strong_sub_title">Shovel ready lands</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
+    <h3 class="strong_sub_title bebas">Shovel ready lands</h3>
+    <p class="lato">London offers truly shovel-ready, master-planned lands in a variety of sizes. These Class-A serviced lands are located next to highways 401 and 402 with easy access to three U.S. border crossings and an international airport. Innovation Park has already attracted multinationals like Hanwha and Dr. Oetker. Get access to world-class infrastructure and fast-tracked regulatory approval for your next investment in London, Ontario, Canada.</p>
     <button class="read_more_button">Read More</button>
   </div>
 
@@ -168,33 +179,36 @@
 
 
 <section id="why_section">
+	<h2 class="hidden">Why Info</h2>
 
 <div class="row">
   <div class="columns small-12 small-centered why_title_section">
-    <h2 class="why_title">WHY THIS INDUSTRY</h2>
-    <p class="why_desc">If Hanwha and Dr.Oetker can reach a global franchise commmunity by optomizing resources here in London, Ontario - what is stopping yourself?</p>
+    <h2 class="why_title bebas">WHY THIS INDUSTRY</h2>
+    <p class="why_desc lato">If Hanwha and Dr.Oetker can reach a global franchise commmunity by optomizing resources here in London, Ontario - what is stopping yourself?</p>
   </div>
 
-  <div class="columns small-12 medium-4 opportunity">
-    <img class="indutry_icon" src="images/opp_icon.png" alt="light bulb icon">
-    <h3 class="industry_section_title">Opportunity</h3>
-    <p class="industry_section_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
-    <button class="read_more_button indutry_button">Read More</button>
-  </div>
 
-  <div class="columns small-12 medium-4 growth">
-    <img class="indutry_icon" src="images/growth_icon.png" alt="increase chart icon">
-    <h3 class="industry_section_title">Growth</h3>
-    <p class="industry_section_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
-    <button class="read_more_button indutry_button">Read More</button>
-  </div>
+  <?php
 
-  <div class="columns small-12 medium-4 success">
-    <img class="indutry_icon" src="images/success_icon.png" alt="checkmark">
-    <h3 class="industry_section_title">Success</h3>
-    <p class="industry_section_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
-    <button class="read_more_button indutry_button">Read More</button>
-  </div>
+  if(!is_string($getLEDC)){
+    while($row = mysqli_fetch_array($getLEDC)){
+      echo "
+      <div class=\"columns small-12 medium-4 why_container\">
+        <img class=\"indutry_icon\" src=\"images/{$row['why_img']}\" alt=\"{$row['why_title']}\">
+        <h3 class=\"industry_section_title bebas\">{$row['why_title']}</h3>
+        <p class=\"industry_section_desc lato\">{$row['why_desc']}</p>
+        <button class=\"read_more_button indutry_button\">Read More</button>
+      </div>
+      ";
+    }
+  }else{
+    echo "<p class=\"error\">{$getLEDC}</p>";
+  }
+
+
+
+
+  	?>
 
 </div>
 </section>
@@ -202,35 +216,30 @@
 
 
 <section id="network_partners">
+	<h2 class="hidden">Jobs</h2>
 
 <div class="row">
-  <div class="columns small-12 small-centered why_title boxHelper">
-    <h2>Enterpreneur Support Network Partners</h2>
+  <div class="columns small-12 small-centered why_title">
+    <h2 class="bebas jobs">Why London? The Jobs!</h2>
+		<p class="jobs_desc lato">Here is the long list of compaines that you could work for in the near future! Make sure to explore all the options as this is possibly your new future!</p>
   </div>
 
-  <div class="columns small-12 medium-6 partner_box boxHelper">
-    opp
+  <div class="columns small-12 medium-6 partner_box">
+    	<img src="images/arcane.png" alt="arcane logo">
   </div>
 
-  <div class="columns small-12 medium-6 partner_box boxHelper">
-    Shovel Ready Lands
+  <div class="columns small-12 medium-6 partner_box">
+    <img src="images/td.png" alt="arcane logo">
   </div>
 
-  <div class="columns small-12 medium-6 partner_box boxHelper">
-    Shovel Ready Lands
+  <div class="columns small-12 medium-6 partner_box">
+    <img src="images/voices.png" alt="arcane logo">
   </div>
 
-  <div class="columns small-12 medium-6 partner_box boxHelper">
-    opp
+  <div class="columns small-12 medium-6 partner_box">
+    <img src="images/digital.png" alt="arcane logo">
   </div>
 
-  <div class="columns small-12 medium-6 partner_box boxHelper">
-    Shovel Ready Lands
-  </div>
-
-  <div class="columns small-12 medium-6 partner_box boxHelper">
-    Shovel Ready Lands
-  </div>
 
 </div>
 </section>
@@ -242,8 +251,36 @@
 
 
 <footer class="lti_footer lato">
+	<h2 class="hidden">Footer</h2>
 
 <div class="row">
+
+
+	<form  method="post">
+	  <div class="row">
+	    <div class="columns small-8 large-4 small-push-2 large-push-2 contact_form_input">
+	      <input id="stop_spam" name="street" type="text" size="21" maxlength="30" />
+	        <input type="text" name="name" placeholder="Name...">
+	    </div>
+	    <div class="columns small-8 large-4 small-pull-2 large-pull-2 contact_form_input">
+	        <input type="text" name="email" placeholder="Email...">
+	    </div>
+	  </div>
+
+	  <div class="row">
+	    <div class="columns small-8 large-8 small-centered contact_form_input"><input type="text" name="message" placeholder="Message..."></div>
+	  </div>
+
+
+	  <div class="row">
+	    <div class="columns small-4 large-2 small-centered contact_submit">
+	      <input type="submit" value="SUBMIT">
+	    </div>
+	  </div>
+	  </form>
+
+
+
 
   <div class="columns small-4">
 <a href="index.php"><img class="footer_logo" src="images/footer_logo.png" alt="logo"></a>
@@ -252,6 +289,7 @@
 
   <div class="columns small-8">
     <nav class="footer_nav ">
+			<h2 class="hidden">Footer Nav</h2>
       <ul>
         <li><a href="what.php">WHAT</a></li>
         <li><a href="index.php">WHY</a></li>
