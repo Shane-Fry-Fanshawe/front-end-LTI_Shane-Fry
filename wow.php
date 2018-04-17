@@ -1,3 +1,25 @@
+<?php
+	//ini_set('display_errors',1);
+	//error_reporting(E_ALL);
+	require_once('admin/phpscripts/config.php');
+
+	if(isset($_GET['filter'])){
+		$tbl = "tbl_wow";
+
+		$col = "movies_id";
+		$col2 = "genre_id";
+		$col3 = "genre_name";
+		$filter = $_GET['filter'];
+		$getLEDC = filterType($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter);
+	}else{
+		$tbl = "tbl_wow";
+		$getWow = getAll($tbl);
+	}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
 <head>
@@ -17,6 +39,7 @@
 
 
 <header class="lti_header bebas">
+	<h2 class="hidden">Header</h2>
 
 <div class="row">
 
@@ -49,6 +72,7 @@
 
   <div class="columns small-6 show-for-medium">
     <nav class="header_nav">
+			<h2 class="hidden">Header Nav</h2>
             <img class="header_icon" src="images/social.png" alt="">
             <img class="header_icon" src="images/social.png" alt="">
       <ul>
@@ -66,6 +90,7 @@
 
 
 <section id="circles_section">
+	<h2 class="hidden">Circles Section</h2>
   <div class="row circle_row">
     <div class="columns hide-for-medium small-10 small-centered">
     </div>
@@ -112,39 +137,35 @@
 
 
 <section id="what_section">
+	<h2 class="hidden">What Section</h2>
 
 <div class="row">
   <div class="columns small-12 small-centered what_title_section">
     <h2 class="why_title bebas">WOW! THE OPPORTUNITIES ARE ENDLESS!</h2>
     <p class="why_desc lato">A wide variety of business development services, job opportunities as well as services itself here in London, Ontario.</p>
   </div>
-
-  <div class="columns small-12 medium-4 what_section_box">
-    <img class="what_icon" src="images/learning.png" alt="girl at laptop">
-    <h3 class="what_section_title bebas">LEARNING</h3>
-    <p class="what_section_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
-    <button class="read_more_button indutry_button">Read More</button>
-  </div>
-
-  <div class="columns small-12 medium-4 what_section_box">
-    <img class="what_icon" src="images/playing.png" alt="people at bar">
-    <h3 class="what_section_title bebas">PLAYING</h3>
-    <p class="what_section_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
-    <button class="read_more_button indutry_button">Read More</button>
-  </div>
-
-  <div class="columns small-12 medium-4 what_section_box">
-    <img class="what_icon" src="images/working.png" alt="writing on paper">
-    <h3 class="what_section_title bebas">WORKING</h3>
-    <p class="what_section_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
-    <button class="read_more_button indutry_button">Read More</button>
-  </div>
-
+    <?php
+    if(!is_string($getWow)){
+      while($row = mysqli_fetch_array($getWow)){
+        echo "
+          <div class=\"columns small-12 medium-4 what_section_box\">
+            <img class=\"what_icon\" src=\"images/{$row['wow_img']}\" alt=\"{$row['wow_title']}\">
+            <h3 class=\"what_section_title bebas\">{$row['wow_title']}</h3>
+            <p class=\"what_section_desc lato\">{$row['wow_desc']}</p>
+            <button class=\"read_more_button indutry_button\">Read More</button>
+          </div>
+        ";
+      }
+    }else{
+      echo "<p class=\"error\">{$getWow}</p>";
+    }
+    	?>
 </div>
 </section>
 
 
 <section id="what_info">
+	<h2 class="hidden">what Info</h2>
   <div class="row">
 <div class="columns small-12 what_info_container">
 
@@ -197,14 +218,15 @@
 
 
 <section>
+	<h2 class="hidden">Video</h2>
   <div class="row">
 
     <div class="columns small-12">
       <h2 class="video_title">Check For Yourself</h2>
-      <video  class="what_video" controls poster="posterimage.jpg">
-        <source src="videos/fact.mp4" type="video/mp4">
-          <source src="videos/fact.webm" type="video/webm">
-        <source src="videos/fact.ovg" type="video/ogg">
+      <video  class="what_video" controls poster="images/posterimage.jpg">
+        <source src="videos/main.mp4" type="video/mp4">
+          <source src="videos/main.webm" type="video/webm">
+        <source src="videos/main.ovg" type="video/ogg">
 
         Your browser doesn't support video?!? that sucks.
 
@@ -218,6 +240,7 @@
 
 
 <footer class="lti_footer lato">
+	      <h2 class="hidden">Footer</h2>
 
 <div class="row">
 
@@ -228,6 +251,7 @@
 
   <div class="columns small-8">
     <nav class="footer_nav ">
+			      <h3 class="hidden">Footer Nav</h3>
       <ul>
         <li><a href="what.php">WHAT</a></li>
         <li><a href="index.php">WHY</a></li>

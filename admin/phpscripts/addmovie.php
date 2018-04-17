@@ -1,20 +1,20 @@
 <?php
-	function addMovie($title, $cover, $year, $runtime, $storyline, $trailer, $release, $genre) {
+	function addMovie($title, $img, $desc) {
 		include("connect.php");
-		if($_FILES['cover']['type'] == "image/jpeg" || $_FILES['cover']['type'] == "image/jpg" ){
-			$target = "../images/{$cover['name']}";
-			 if(move_uploaded_file($_FILES['cover']['tmp_name'], $target)){
-			 	
-			 	$orig = "../images/{$cover['name']}";
-			 	$th_copy = "../images/TH_{$cover['name']}";
+		if($_FILES['img']['type'] == "image/jpeg" || $_FILES['img']['type'] == "image/jpg" ){
+			$target = "../images/{$img['name']}";
+			 if(move_uploaded_file($_FILES['img']['tmp_name'], $target)){
+
+			 	$orig = "../images/{$img['name']}";
+			 	$th_copy = "../images/TH_{$img['name']}";
 			 	if(!copy($orig, $th_copy)){
 			 		echo "Failed to copy";
 			 	}
 
 			 	//$size = getimagesize($orig);
 			 	//echo $size[1];
-			 	//$image = $cover['name'];
-			 	$addstring = "INSERT INTO tbl_movies VALUES(NULL, '{$cover['name']}','{$title}','{$year}','{$runtime}','{$storyline}','{$trailer}','{$release}')";
+			 	//$image = $img['name'];
+			 	$addstring = "INSERT INTO tbl_movies VALUES(NULL, '{$img['name']}','{$title}','{$year}','{$runtime}','{$storyline}','{$trailer}','{$release}')";
 			 	//echo $addstring;
 			 	$addresult = mysqli_query($link, $addstring);
 			 	if($addresult){

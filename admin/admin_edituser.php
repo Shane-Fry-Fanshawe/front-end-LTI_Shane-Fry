@@ -46,10 +46,9 @@
 					<div class="columns small-12 lato">
 						<div>
 						<ul class="admin_nav">
-							<li><a href="../index.php">Movies</a></li>
+							<li><a href="../index.php">LTI</a></li>
 						<li><a href="admin_index.php">Home</a></li>
-						<li><a href="admin_editall.php">Edit Movie</a></li>
-						<li><a href="admin_addmovie.php">Add Movie</a></li>
+						<li><a href="admin_editall.php">Edit Pages</a></li>
 						<li><a href="admin_createuser.php">Create User</a></li>
 						<li><a href="admin_edituser.php">Edit User</a></li>
 						<li><a href="admin_deleteuser.php">Fired</a></li>

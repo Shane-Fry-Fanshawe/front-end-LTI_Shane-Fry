@@ -1,5 +1,5 @@
 <?php
-	
+
 	function single_edit($tbl,$col,$id) {
 		$result = getSingle($tbl, $col, $id);
 		$getResult = mysqli_fetch_array($result);
@@ -15,15 +15,15 @@
 			$fieldtype = $dataType -> type;
 			//echo $fieldtype."<br>";
 			if($fieldname != $col){
-				echo "<label>{$fieldname}</label><br>";
+				echo "<label class=\"lato\">{$fieldname}</label><br>";
 				if($fieldtype != "252"){
-					echo "<input type=\"text\" name=\"{$fieldname}\" value=\"{$getResult[$i]}\"><br><br>";
+					echo "<input class=\"lato\" type=\"text\" name=\"{$fieldname}\" value=\"{$getResult[$i]}\"><br><br>";
 				}else{
-					echo "<textarea name=\"{$fieldname}\">{$getResult[$i]}</textarea><br><br>";
+					echo "<textarea class=\"lato\" name=\"{$fieldname}\">{$getResult[$i]}</textarea><br><br>";
 				}
 			}
 		}
-		echo "<input type=\"submit\" name=\"submit\" value=\"Save Content\">";
+		echo "<input class=\"submit\" type=\"submit\" name=\"submit\" value=\"Save Content\">";
 		echo "</form>";
 	}
 ?>
