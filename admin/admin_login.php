@@ -44,7 +44,7 @@
 		<label>Password:</label>
 		<input type="text" name="password" value="">
 		<br>
-		<input class="submit" type="submit" name="submit" value="Show me the money">
+		<input class="submit" type="submit" name="submit" value="Log In">
 	</form>
 		</div>
 </div>

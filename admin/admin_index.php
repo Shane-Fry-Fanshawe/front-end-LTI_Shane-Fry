@@ -11,10 +11,10 @@
 		$col2 = "genre_id";
 		$col3 = "genre_name";
 		$filter = $_GET['filter'];
-		$getLEDC = filterType($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter);
+		$getMovies = filterType($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter);
 	}else{
 		$tbl = "tbl_ledc";
-		$getLEDC = getAll($tbl);
+		$getMovies = getAll($tbl);
 	}
 ?>
 
@@ -44,10 +44,9 @@
 					<div class="columns small-12 lato">
 						<div>
 						<ul class="admin_nav">
-							<li><a href="../index.php">Movies</a></li>
+							<li><a href="../index.php">LTI</a></li>
 						<li><a href="admin_index.php">Home</a></li>
-						<li><a href="admin_editall.php">Edit Movie</a></li>
-						<li><a href="admin_addmovie.php">Add Movie</a></li>
+						<li><a href="admin_editall.php">Edit Pages</a></li>
 						<li><a href="admin_createuser.php">Create User</a></li>
 						<li><a href="admin_edituser.php">Edit User</a></li>
 						<li><a href="admin_deleteuser.php">Fired</a></li>
@@ -65,21 +64,6 @@
 			<?php echo "<h2 class=\"welcome_message\">Hi - {$_SESSION['user_name']} hope youre having a good day!</h2>"; ?>
 	</div>
 </div>
-
-
-
-<?php
-
-
-		$row = mysqli_fetch_array($getLEDC);
-				echo "<div class=\"movie_container\"> <img class=\"movie_image\" src=\"images/{$row['ledc_img']}\" alt=\"{$row['ledc_title']}\">
-					<h2 class=\"movie_text\">{$row['ledc_desc']}</h2>
-
-					<br><br></div>";
-
-
-
-	?>
 
 
 
